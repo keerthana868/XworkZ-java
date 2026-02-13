@@ -1,46 +1,13 @@
 class InductionStove{
-	
-	static boolean isTurnedOn;
-    static int currentTemperature;
-	static int maxTemperature=8;
-	static int minTemperature;	
-	
-	   static boolean onOrOff(){
-		   if(isTurnedOn == false ){
-			  isTurnedOn = true ;
-			  System.out.println("The oven is turned on..");
-		   }else if(isTurnedOn == true){
-			   isTurnedOn = false;
-			   System.out.println("The oven is turned off..");
-		   }
-		   
-		   return isTurnedOn;
-	   }
-	   static void increaseTemperature(){
-		   
-		   if(isTurnedOn==true){
-			   if(currentTemperature<maxTemperature){
-				   currentTemperature+=1;
-				   System.out.println("The current Temperature is:"+currentTemperature);
-			   }else{
-				   System.out.println("The current Temperature reached its maximum Temperature.");
-		       }
-		    }else{
-			  System.out.println("Please first Turn on the oven");
-			}
-	   }
-	   
-	   static void decreaseTemperature(){
-		   
-		   if(isTurnedOn==true){
-			   if(currentTemperature>minTemperature){
-				   currentTemperature-=1;
-				   System.out.println("The current Temperature is:"+currentTemperature);
-			   }else{
-				   System.out.println("The current Temperature reached its minimum Temperature.");
-		       }
-		    }else{
-			  System.out.println("Please first Turn on the oven");
-			}
-	   }
+public static String getBrand(){System.out.println("Fetching the information!!!!");return "Prestige";}
+public static double getPrice(){System.out.println("Fetching the information!!!!");return 3500;}
+public static int getPower(){System.out.println("Fetching the information!!!!");return 2000;}
+public static boolean getAutoOff(){System.out.println("Fetching the information!!!!");return true;}
+public static int getPrograms(){System.out.println("Fetching the information!!!!");return 7;}
+public static boolean getTimer(){System.out.println("Fetching the information!!!!");return true;}
+public static int getWarranty(){System.out.println("Fetching the information!!!!");return 1;}
+public static String getColor(){System.out.println("Fetching the information!!!!");return "Black";}
+public static boolean getTouchPanel(){System.out.println("Fetching the information!!!!");return true;}
+public static double getWeight(){System.out.println("Fetching the information!!!!");return 2.3;}
 }
+
