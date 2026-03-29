@@ -1,24 +1,36 @@
-class TelevisionExecutor{
-    public static void main(String[] args){
+class TelevisionExecutor {
+    public static void main(String[] args) {
         Television obj = new Television();
 
-        boolean v1 = obj.addChannelName("Star Plus");
-        boolean v2 = obj.addChannelName("Zee TV");
-        boolean v3 = obj.addChannelName("Colors");
-        boolean v4 = obj.addChannelName("Sony TV");
-        boolean v5 = obj.addChannelName("Sun TV");
-        boolean v6 = obj.addChannelName("Gemini TV");
-        boolean v7 = obj.addChannelName("Udaya TV");
-        boolean v8 = obj.addChannelName("Asianet");
-        boolean v9 = obj.addChannelName("ETV");
-        boolean v10 = obj.addChannelName("Discovery");
-        boolean v11 = obj.addChannelName("National Geographic");
-        boolean v12 = obj.addChannelName("Cartoon Network");
-        boolean v13 = obj.addChannelName("Pogo");
-        boolean v14 = obj.addChannelName("Nickelodeon");
-        boolean v15 = obj.addChannelName("Star Sports");
-        boolean v16 = obj.addChannelName("Sony Sports");
-        boolean v17 = obj.addChannelName("DD National");
+        obj.addChannelName("Star Plus");
+        obj.addChannelName("Zee TV");
+        obj.addChannelName("Colors");
+        obj.addChannelName("Sony TV");
+        obj.addChannelName("Sun TV");
+        obj.addChannelName("Gemini TV");
+        obj.addChannelName("Udaya TV");
+        obj.addChannelName("Asianet");
+        obj.addChannelName("ETV");
+        obj.addChannelName("Discovery");
+        obj.addChannelName("National Geographic");
+        obj.addChannelName("Cartoon Network");
+        obj.addChannelName("Pogo");
+        obj.addChannelName("Nickelodeon");
+        obj.addChannelName("Star Sports");
+        obj.addChannelName("Sony Sports");
+        obj.addChannelName("DD National");
+
+        System.out.println("All Items:");
+        obj.getChannelNames();
+
+        int index = obj.search("Star Plus");
+        System.out.println("Index: " + index);
+
+        obj.update("Star Plus", "Star Plus Updated");
+        obj.delete("DD National");
+
+        System.out.println("Final Data:");
         obj.getChannelNames();
     }
 }
+

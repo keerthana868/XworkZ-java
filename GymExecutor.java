@@ -1,23 +1,34 @@
-class GymExecutor{
-	public static void main(String[] args){
-		Gym gymManage = new Gym();
-		boolean equipment1 = gymManage.addEquipmentName("dumble");
-		boolean equipment2 = gymManage.addEquipmentName("threadmill");
-		boolean equipment3 = gymManage.addEquipmentName("cycle");
-		boolean equipment4 = gymManage.addEquipmentName("cross trainer");
-		boolean equipment5 = gymManage.addEquipmentName("Elliptical");
-		boolean equipment6 = gymManage.addEquipmentName("Bike");
-		boolean equipment7 = gymManage.addEquipmentName("smith rack");
-		boolean equipment8 = gymManage.addEquipmentName("free squat rack");
-		boolean equipment9 = gymManage.addEquipmentName("large gantry frame");
-		boolean equipment10 = gymManage.addEquipmentName("pullup machine");
-		boolean equipment11= gymManage.addEquipmentName("roman chair");
-		boolean equipment12= gymManage.addEquipmentName("kettlebell");
-		boolean equipment13= gymManage.addEquipmentName("steerup machine");
-		boolean equipment14= gymManage.addEquipmentName("butterfly ,achine");
-		boolean equipment15= gymManage.addEquipmentName("chest pusher");
-		boolean equipment16= gymManage.addEquipmentName("fitnesscana");
-		
-		gymManage.getEquipmentNames();
-	}
+class GymExecutor {
+    public static void main(String[] args) {
+        Gym obj = new Gym();
+
+        obj.addEquipment("Treadmill");
+        obj.addEquipment("Dumbbells");
+        obj.addEquipment("Barbell");
+        obj.addEquipment("Bench Press");
+        obj.addEquipment("Leg Press");
+        obj.addEquipment("Pull Up Bar");
+        obj.addEquipment("Elliptical");
+        obj.addEquipment("Rowing Machine");
+        obj.addEquipment("Kettlebell");
+        obj.addEquipment("Resistance Bands");
+        obj.addEquipment("Cable Machine");
+        obj.addEquipment("Smith Machine");
+        obj.addEquipment("Exercise Bike");
+        obj.addEquipment("Medicine Ball");
+        obj.addEquipment("Stepper");
+        obj.addEquipment("Foam Roller");
+
+        System.out.println("All Items:");
+        obj.getEquipments();
+
+        int index = obj.search("Treadmill");
+        System.out.println("Index: " + index);
+
+        obj.update("Treadmill", "Treadmill Updated");
+        obj.delete("Foam Roller");
+
+        System.out.println("Final Data:");
+        obj.getEquipments();
+    }
 }

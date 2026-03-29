@@ -1,16 +1,28 @@
-class CricBuzExecutor{
-    public static void main(String[] args){
+class CricBuzExecutor {
+    public static void main(String[] args) {
         CricBuz obj = new CricBuz();
 
-        boolean v1 = obj.addTeamName("India");
-        boolean v2 = obj.addTeamName("Australia");
-        boolean v3 = obj.addTeamName("England");
-        boolean v4 = obj.addTeamName("South Africa");
-        boolean v5 = obj.addTeamName("New Zealand");
-        boolean v6 = obj.addTeamName("Pakistan");
-        boolean v7 = obj.addTeamName("Sri Lanka");
-        boolean v8 = obj.addTeamName("West Indies");
+        obj.addTeamName("India");
+        obj.addTeamName("Australia");
+        obj.addTeamName("England");
+        obj.addTeamName("South Africa");
+        obj.addTeamName("New Zealand");
+        obj.addTeamName("Pakistan");
+        obj.addTeamName("Sri Lanka");
+        obj.addTeamName("West Indies");
+
+        System.out.println("All Items:");
+        obj.getTeamNames();
+
+        int index = obj.search("India");
+        System.out.println("Index: " + index);
+
+        obj.update("India", "India Updated");
+        obj.delete("West Indies");
+
+        System.out.println("Final Data:");
         obj.getTeamNames();
     }
 }
+
 

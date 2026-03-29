@@ -1,33 +1,44 @@
-class ECommerceExecutor{
-    public static void main(String[] args){
+class ECommerceExecutor {
+    public static void main(String[] args) {
         ECommerce obj = new ECommerce();
 
-        boolean v1 = obj.addProductName("iPhone");
-        boolean v2 = obj.addProductName("Laptop");
-        boolean v3 = obj.addProductName("Headphones");
-        boolean v4 = obj.addProductName("Smartwatch");
-        boolean v5 = obj.addProductName("Camera");
-        boolean v6 = obj.addProductName("Shoes");
-        boolean v7 = obj.addProductName("Backpack");
-        boolean v8 = obj.addProductName("T-Shirt");
-        boolean v9 = obj.addProductName("Jeans");
-        boolean v10 = obj.addProductName("Washing Machine");
-        boolean v11 = obj.addProductName("Refrigerator");
-        boolean v12 = obj.addProductName("Television");
-        boolean v13 = obj.addProductName("Mixer Grinder");
-        boolean v14 = obj.addProductName("Air Conditioner");
-        boolean v15 = obj.addProductName("Microwave");
-        boolean v16 = obj.addProductName("Keyboard");
-        boolean v17 = obj.addProductName("Mouse");
-        boolean v18 = obj.addProductName("Tablet");
-        boolean v19 = obj.addProductName("Power Bank");
-        boolean v20 = obj.addProductName("Bluetooth Speaker");
-        boolean v21 = obj.addProductName("Gaming Console");
-        boolean v22 = obj.addProductName("Printer");
-        boolean v23 = obj.addProductName("Router");
-        boolean v24 = obj.addProductName("Drone");
-        boolean v25 = obj.addProductName("Projector");
-        boolean v26 = obj.addProductName("Smart Bulb");
+        obj.addProductName("iPhone");
+        obj.addProductName("Laptop");
+        obj.addProductName("Headphones");
+        obj.addProductName("Smartwatch");
+        obj.addProductName("Camera");
+        obj.addProductName("Shoes");
+        obj.addProductName("Backpack");
+        obj.addProductName("T-Shirt");
+        obj.addProductName("Jeans");
+        obj.addProductName("Washing Machine");
+        obj.addProductName("Refrigerator");
+        obj.addProductName("Television");
+        obj.addProductName("Mixer Grinder");
+        obj.addProductName("Air Conditioner");
+        obj.addProductName("Microwave");
+        obj.addProductName("Keyboard");
+        obj.addProductName("Mouse");
+        obj.addProductName("Tablet");
+        obj.addProductName("Power Bank");
+        obj.addProductName("Bluetooth Speaker");
+        obj.addProductName("Gaming Console");
+        obj.addProductName("Printer");
+        obj.addProductName("Router");
+        obj.addProductName("Drone");
+        obj.addProductName("Projector");
+        obj.addProductName("Smart Bulb");
+
+        System.out.println("All Items:");
+        obj.getProductNames();
+
+        int index = obj.search("iPhone");
+        System.out.println("Index: " + index);
+
+        obj.update("iPhone", "iPhone Updated");
+        obj.delete("Smart Bulb");
+
+        System.out.println("Final Data:");
         obj.getProductNames();
     }
 }

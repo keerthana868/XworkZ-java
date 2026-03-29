@@ -1,16 +1,27 @@
-class StateExecutor{
-    public static void main(String[] args){
+class StateExecutor {
+    public static void main(String[] args) {
         State obj = new State();
 
-        boolean v1 = obj.addHighwayName("NH44");
-        boolean v2 = obj.addHighwayName("NH48");
-        boolean v3 = obj.addHighwayName("NH66");
-        boolean v4 = obj.addHighwayName("NH75");
-        boolean v5 = obj.addHighwayName("NH150");
-        boolean v6 = obj.addHighwayName("NH275");
-        boolean v7 = obj.addHighwayName("NH50");
-        boolean v8 = obj.addHighwayName("NH52");
-        boolean v9 = obj.addHighwayName("NH169");
+        obj.addHighwayName("NH44");
+        obj.addHighwayName("NH48");
+        obj.addHighwayName("NH66");
+        obj.addHighwayName("NH75");
+        obj.addHighwayName("NH150");
+        obj.addHighwayName("NH275");
+        obj.addHighwayName("NH50");
+        obj.addHighwayName("NH52");
+        obj.addHighwayName("NH169");
+
+        System.out.println("All Items:");
+        obj.getHighwayNames();
+
+        int index = obj.search("NH44");
+        System.out.println("Index: " + index);
+
+        obj.update("NH44", "NH44 Updated");
+        obj.delete("NH169");
+
+        System.out.println("Final Data:");
         obj.getHighwayNames();
     }
 }

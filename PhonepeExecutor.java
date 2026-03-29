@@ -1,35 +1,47 @@
-class PhonepeExecutor{
-	public static void main(String[] args){
-		Phonepe pManage = new Phonepe();
-		boolean insurance1 = pManage.addInsuranceName("Health");
-		boolean insurance2 = pManage.addInsuranceName("Bike");
-		boolean insurance3 = pManage.addInsuranceName("Term life");
-		boolean insurance4 = pManage.addInsuranceName("Car");
-		boolean insurance5 = pManage.addInsuranceName("Travel");
-		boolean insurance6 = pManage.addInsuranceName("Shop");
-		boolean insurance7 = pManage.addInsuranceName("House");
-		boolean insurance8 = pManage.addInsuranceName("Site");
-		boolean insurance9 = pManage.addInsuranceName("Accident");
-		boolean insurance10 = pManage.addInsuranceName("Safe pe");
-		boolean insurance11= pManage.addInsuranceName("Smart pe");
-		boolean insurance12= pManage.addInsuranceName("Trust pe");
-		boolean insurance13= pManage.addInsuranceName("InstaSure");
-		boolean insurance14= pManage.addInsuranceName("Pay secure");
-		boolean insurance15= pManage.addInsuranceName("Easy cover");
-		boolean insurance16= pManage.addInsuranceName("Pay shield");
-		boolean insurance17= pManage.addInsuranceName("Secure nest");
-		boolean insurance18= pManage.addInsuranceName("Life pe");
-		boolean insurance19= pManage.addInsuranceName("PeProtect");
-		boolean insurance20= pManage.addInsuranceName("Rapid cover");
-		boolean insurance21= pManage.addInsuranceName("Pe guard");
-		boolean insurance22 = pManage.addInsuranceName("Pe care");
-		boolean insurance23= pManage.addInsuranceName("OneTap");
-		boolean insurance24= pManage.addInsuranceName("Urban secure");
-		boolean insurance25= pManage.addInsuranceName("Pe safety");
-		boolean insurance26= pManage.addInsuranceName("Netpe");
-		boolean insurance27 = pManage.addInsuranceName("Safenet");
-		
-		pManage.getInsuranceNames();
-	}
+class PhonepeExecutor {
+    public static void main(String[] args) {
+        Phonepe obj = new Phonepe();
+
+        obj.addInsuranceName("Health Insurance");
+        obj.addInsuranceName("Life Insurance");
+        obj.addInsuranceName("Vehicle Insurance");
+        obj.addInsuranceName("Travel Insurance");
+        obj.addInsuranceName("Home Insurance");
+        obj.addInsuranceName("Accident Insurance");
+        obj.addInsuranceName("Term Plan");
+        obj.addInsuranceName("ULIP Plan");
+        obj.addInsuranceName("Child Plan");
+        obj.addInsuranceName("Pension Plan");
+        obj.addInsuranceName("Fire Insurance");
+        obj.addInsuranceName("Marine Insurance");
+        obj.addInsuranceName("Crop Insurance");
+        obj.addInsuranceName("Bike Insurance");
+        obj.addInsuranceName("Car Insurance");
+        obj.addInsuranceName("Family Floater");
+        obj.addInsuranceName("Senior Citizen Plan");
+        obj.addInsuranceName("Dental Insurance");
+        obj.addInsuranceName("Vision Insurance");
+        obj.addInsuranceName("Critical Illness");
+        obj.addInsuranceName("Personal Loan Cover");
+        obj.addInsuranceName("Mobile Insurance");
+        obj.addInsuranceName("Laptop Insurance");
+        obj.addInsuranceName("Shop Insurance");
+        obj.addInsuranceName("Business Insurance");
+        obj.addInsuranceName("Pet Insurance");
+        obj.addInsuranceName("Wedding Insurance");
+
+        System.out.println("All Items:");
+        obj.getInsuranceNames();
+
+        int index = obj.search("Health Insurance");
+        System.out.println("Index: " + index);
+
+        obj.update("Health Insurance", "Health Insurance Updated");
+        obj.delete("Wedding Insurance");
+
+        System.out.println("Final Data:");
+        obj.getInsuranceNames();
+    }
 }
+
 		

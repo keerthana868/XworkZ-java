@@ -1,18 +1,29 @@
-class ArchitectExecutor{
-    public static void main(String[] args){
+class ArchitectExecutor {
+    public static void main(String[] args) {
         Architect obj = new Architect();
 
-        boolean v1 = obj.addInteriorDesign("Minimalist");
-        boolean v2 = obj.addInteriorDesign("Modern");
-        boolean v3 = obj.addInteriorDesign("Contemporary");
-        boolean v4 = obj.addInteriorDesign("Industrial");
-        boolean v5 = obj.addInteriorDesign("Scandinavian");
-        boolean v6 = obj.addInteriorDesign("Bohemian");
-        boolean v7 = obj.addInteriorDesign("Traditional");
-        boolean v8 = obj.addInteriorDesign("Rustic");
-        boolean v9 = obj.addInteriorDesign("Art Deco");
-        boolean v10 = obj.addInteriorDesign("Mid-Century");
-        boolean v11 = obj.addInteriorDesign("Transitional");
+        obj.addInteriorDesign("Minimalist");
+        obj.addInteriorDesign("Modern");
+        obj.addInteriorDesign("Contemporary");
+        obj.addInteriorDesign("Industrial");
+        obj.addInteriorDesign("Scandinavian");
+        obj.addInteriorDesign("Bohemian");
+        obj.addInteriorDesign("Traditional");
+        obj.addInteriorDesign("Rustic");
+        obj.addInteriorDesign("Art Deco");
+        obj.addInteriorDesign("Mid-Century");
+        obj.addInteriorDesign("Transitional");
+
+        System.out.println("All Items:");
+        obj.getInteriorDesignNames();
+
+        int index = obj.search("Minimalist");
+        System.out.println("Index: " + index);
+
+        obj.update("Minimalist", "Minimalist Updated");
+        obj.delete("Transitional");
+
+        System.out.println("Final Data:");
         obj.getInteriorDesignNames();
     }
 }

@@ -1,16 +1,28 @@
-class GovernmentExecutor{
-    public static void main(String[] args){
+class GovernmentExecutor {
+    public static void main(String[] args) {
         Government obj = new Government();
 
-        boolean v1 = obj.addExamName("UPSC");
-        boolean v2 = obj.addExamName("SSC CGL");
-        boolean v3 = obj.addExamName("SSC CHSL");
-        boolean v4 = obj.addExamName("IBPS PO");
-        boolean v5 = obj.addExamName("IBPS Clerk");
-        boolean v6 = obj.addExamName("RRB NTPC");
-        boolean v7 = obj.addExamName("GATE");
-        boolean v8 = obj.addExamName("NEET");
-        boolean v9 = obj.addExamName("JEE");
+        obj.addExamName("UPSC");
+        obj.addExamName("SSC CGL");
+        obj.addExamName("SSC CHSL");
+        obj.addExamName("IBPS PO");
+        obj.addExamName("IBPS Clerk");
+        obj.addExamName("RRB NTPC");
+        obj.addExamName("GATE");
+        obj.addExamName("NEET");
+        obj.addExamName("JEE");
+
+        System.out.println("All Items:");
+        obj.getCompetitiveExamNames();
+
+        int index = obj.search("UPSC");
+        System.out.println("Index: " + index);
+
+        obj.update("UPSC", "UPSC Updated");
+        obj.delete("JEE");
+
+        System.out.println("Final Data:");
         obj.getCompetitiveExamNames();
     }
 }
+

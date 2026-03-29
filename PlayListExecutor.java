@@ -1,22 +1,34 @@
-class PlayListExecutor{
-    public static void main(String[] args){
+class PlayListExecutor {
+    public static void main(String[] args) {
         PlayList obj = new PlayList();
 
-        boolean v1 = obj.addSongName("Shape of You");
-        boolean v2 = obj.addSongName("Blinding Lights");
-        boolean v3 = obj.addSongName("Perfect");
-        boolean v4 = obj.addSongName("Levitating");
-        boolean v5 = obj.addSongName("Peaches");
-        boolean v6 = obj.addSongName("Stay");
-        boolean v7 = obj.addSongName("Senorita");
-        boolean v8 = obj.addSongName("Closer");
-        boolean v9 = obj.addSongName("Believer");
-        boolean v10 = obj.addSongName("Faded");
-        boolean v11 = obj.addSongName("Happier");
-        boolean v12 = obj.addSongName("Counting Stars");
-        boolean v13 = obj.addSongName("Love Me Like You Do");
-        boolean v14 = obj.addSongName("On My Way");
-        boolean v15 = obj.addSongName("Let Me Love You");
+        obj.addSongName("Shape of You");
+        obj.addSongName("Blinding Lights");
+        obj.addSongName("Perfect");
+        obj.addSongName("Levitating");
+        obj.addSongName("Peaches");
+        obj.addSongName("Stay");
+        obj.addSongName("Senorita");
+        obj.addSongName("Closer");
+        obj.addSongName("Believer");
+        obj.addSongName("Faded");
+        obj.addSongName("Happier");
+        obj.addSongName("Counting Stars");
+        obj.addSongName("On My Way");
+        obj.addSongName("Let Me Love You");
+        obj.addSongName("Cheap Thrills");
+
+        System.out.println("All Items:");
+        obj.getSongNames();
+
+        int index = obj.search("Shape of You");
+        System.out.println("Index: " + index);
+
+        obj.update("Shape of You", "Shape of You Updated");
+        obj.delete("Cheap Thrills");
+
+        System.out.println("Final Data:");
         obj.getSongNames();
     }
 }
+
