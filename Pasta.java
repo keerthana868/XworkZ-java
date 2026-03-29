@@ -1,33 +1,33 @@
-class ECommerce {
-    private String productNames[] = new String[26];
+class Pasta {
+    private String items[] = new String[15];
     int index;
 
-    public boolean addProductName(String val) {
+    public boolean add(String val) {
         if (val != null && !val.isEmpty()) {
-            productNames[index++] = val;
+            items[index++] = val;
             return true;
         }
         System.out.println("Invalid");
         return false;
     }
 
-    public void getProductNames() {
-        for (String v : productNames)
+    public void getAll() {
+        for (String v : items)
             if (v != null) System.out.println(v);
     }
 
     public int search(String val) {
-        for (int i = 0; i < productNames.length; i++)
-            if (val != null && val.equals(productNames[i])) return i;
+        for (int i = 0; i < items.length; i++)
+            if (val != null && val.equals(items[i])) return i;
         return -1;
     }
 
     public boolean update(String oldVal, String newVal) {
         boolean updated = false;
         if (newVal != null) {
-            for (int i = 0; i < productNames.length; i++) {
-                if (productNames[i] != null && productNames[i].equals(oldVal)) {
-                    productNames[i] = newVal;
+            for (int i = 0; i < items.length; i++) {
+                if (items[i] != null && items[i].equals(oldVal)) {
+                    items[i] = newVal;
                     updated = true;
                 }
             }
@@ -38,10 +38,10 @@ class ECommerce {
 
     public boolean delete(String val) {
         for (int i = 0; i < index; i++) {
-            if (productNames[i] != null && productNames[i].equals(val)) {
+            if (items[i] != null && items[i].equals(val)) {
                 for (int j = i; j < index - 1; j++)
-                    productNames[j] = productNames[j + 1];
-                productNames[--index] = null;
+                    items[j] = items[j + 1];
+                items[--index] = null;
                 return true;
             }
         }

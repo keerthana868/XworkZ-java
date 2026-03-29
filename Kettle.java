@@ -1,33 +1,33 @@
-class Wonderla {
-    private String waterGames[] = new String[20];
+class Kettle {
+    private String items[] = new String[15];
     int index;
 
-    public boolean addWaterGame(String val) {
+    public boolean add(String val) {
         if (val != null && !val.isEmpty()) {
-            waterGames[index++] = val;
+            items[index++] = val;
             return true;
         }
         System.out.println("Invalid");
         return false;
     }
 
-    public void getWaterGames() {
-        for (String v : waterGames)
+    public void getAll() {
+        for (String v : items)
             if (v != null) System.out.println(v);
     }
 
     public int search(String val) {
-        for (int i = 0; i < waterGames.length; i++)
-            if (val != null && val.equals(waterGames[i])) return i;
+        for (int i = 0; i < items.length; i++)
+            if (val != null && val.equals(items[i])) return i;
         return -1;
     }
 
     public boolean update(String oldVal, String newVal) {
         boolean updated = false;
         if (newVal != null) {
-            for (int i = 0; i < waterGames.length; i++) {
-                if (waterGames[i] != null && waterGames[i].equals(oldVal)) {
-                    waterGames[i] = newVal;
+            for (int i = 0; i < items.length; i++) {
+                if (items[i] != null && items[i].equals(oldVal)) {
+                    items[i] = newVal;
                     updated = true;
                 }
             }
@@ -38,10 +38,10 @@ class Wonderla {
 
     public boolean delete(String val) {
         for (int i = 0; i < index; i++) {
-            if (waterGames[i] != null && waterGames[i].equals(val)) {
+            if (items[i] != null && items[i].equals(val)) {
                 for (int j = i; j < index - 1; j++)
-                    waterGames[j] = waterGames[j + 1];
-                waterGames[--index] = null;
+                    items[j] = items[j + 1];
+                items[--index] = null;
                 return true;
             }
         }

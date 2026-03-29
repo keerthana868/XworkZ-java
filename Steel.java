@@ -1,33 +1,33 @@
-class Universe {
-    private String galaxies[] = new String[17];
+class Steel {
+    private String items[] = new String[15];
     int index;
 
-    public boolean addGalaxy(String val) {
+    public boolean add(String val) {
         if (val != null && !val.isEmpty()) {
-            galaxies[index++] = val;
+            items[index++] = val;
             return true;
         }
         System.out.println("Invalid");
         return false;
     }
 
-    public void getGalaxies() {
-        for (String v : galaxies)
+    public void getAll() {
+        for (String v : items)
             if (v != null) System.out.println(v);
     }
 
     public int search(String val) {
-        for (int i = 0; i < galaxies.length; i++)
-            if (val != null && val.equals(galaxies[i])) return i;
+        for (int i = 0; i < items.length; i++)
+            if (val != null && val.equals(items[i])) return i;
         return -1;
     }
 
     public boolean update(String oldVal, String newVal) {
         boolean updated = false;
         if (newVal != null) {
-            for (int i = 0; i < galaxies.length; i++) {
-                if (galaxies[i] != null && galaxies[i].equals(oldVal)) {
-                    galaxies[i] = newVal;
+            for (int i = 0; i < items.length; i++) {
+                if (items[i] != null && items[i].equals(oldVal)) {
+                    items[i] = newVal;
                     updated = true;
                 }
             }
@@ -38,10 +38,10 @@ class Universe {
 
     public boolean delete(String val) {
         for (int i = 0; i < index; i++) {
-            if (galaxies[i] != null && galaxies[i].equals(val)) {
+            if (items[i] != null && items[i].equals(val)) {
                 for (int j = i; j < index - 1; j++)
-                    galaxies[j] = galaxies[j + 1];
-                galaxies[--index] = null;
+                    items[j] = items[j + 1];
+                items[--index] = null;
                 return true;
             }
         }
